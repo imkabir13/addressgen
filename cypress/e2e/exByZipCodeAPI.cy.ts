@@ -8,7 +8,7 @@ describe("Random address test", () => {
     ).then((response) => {
       const zipCodes = response.body;
       const randomZipCode =
-        zipCodes[Math.floor(Math.random() * zipCodes.length)].Code;
+        zipCodes[Math.floor(Math.random() * zipCodes.length)].ZipCode;
 
       cy.request(
         `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/GetZipCodeDetails/${randomZipCode}?key=${apiKey}`
